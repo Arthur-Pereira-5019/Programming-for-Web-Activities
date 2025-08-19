@@ -85,33 +85,40 @@
         </div>
         <div>
             <h2>formularios</h2>
+            <form>
             <label for="nomeusuario">Nome</label>
-            
+
+            <input id="nomeusuario " type="text">
             <br>
-            <input id="nomeusuario "type="text">
+            <label for="cachaca">Cor Cachaça</label>
+            <input id="cachaca" type="color">
             <br>
-            <label for="cachaca">cor Cachaça</label>
-            <input id="cachaca" type="text">
-            <br>
-                        <label for="data">Data de Nascimento</label>
+            <label for="data">Data de Nascimento</label>
             <input id="data" type="date">
             <br>
-                        <label for="email">Email</label>
-
+            <label for="email">Email</label>
             <input id="email" type="email">
             <br>
-                        <label for="endereco">Endereço</label>
+            <label for="endereco">Endereço</label>
 
             <input id="endereco" type="text">
             <br>
-                        <label for="observacao">Observação</label>
-
-            <input id="observacao" type="textarea">
+            <label for="observacao">Observação</label>
+            <textarea id="observacao" name="Observacao" rows="4" cols="50">Escreva observações aqui</textarea>
             <br>
-                        <label for="botao">Submeter</label>
+            <label for="botao">Submeter</label>
 
-            <input id="botao" type="button">
+            <input id="botao"type="button">Button</input>
+            </div>
             <br>
+            </form>
+
+            <form action = "https://google.com/search">
+                <h2>busca</h2>
+                <label for="key">Entre com termo</label>
+                <input type="text" id="key"name="q">
+                <button>buscar</button>
+            </form>
         </div>
 
     </body>
