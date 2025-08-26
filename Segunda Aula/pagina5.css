@@ -1,0 +1,11 @@
+[for="nome"], [type="submit"] {
+    color:magenta
+}
+
+p:hover {
+    color:orange;
+    font-size: 40pt;
+}
+#submit2[type=submit]:hover{
+    font-size:80pt
+}

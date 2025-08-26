@@ -2,3 +2,17 @@ p{
     color: #945454;
     background-color: yellowgreen;
 }
+
+body,p,div {
+    background-color: #945454;
+}
+p{
+    color:blueviolet;
+    background-color: maroon;
+}
+#descricao-css {
+    font-weight: 900;
+}
+.titulo {
+    font-size: 120;
+}
