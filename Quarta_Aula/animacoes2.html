@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <style>
+div {
+            width: 5vw;
+            height: 5vw;
+            background-color: purple;
+            animation: mover 5s    none 0s infinite;
+            position: fixed;
+            top: 0px
+        
+        }
+
+            @keyframes mover {
+            0%{
+                top: 0vw;
+                left: 0vw;
+                background-color: red;
+                border-radius: 0%;
+            }
+
+            25% {
+                top:90%;
+                left:0vw;
+                background-color: purple;
+                border-radius: 33%;
+            }
+
+            50%{
+                top:90%;
+                left:95%;
+                background-color: yellow;
+                border-radius: 77%;
+            }
+
+            75% {
+                top:0%;
+                left:95%;
+                background-color: green;
+                border-radius: 33%;
+            }
+
+            100%{
+                top:0%;
+                left:0%;
+                background-color: blue;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box" id="item1">1</div>
+        </div>
+    </body>
+</html>
