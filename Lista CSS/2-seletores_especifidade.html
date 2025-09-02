@@ -27,17 +27,16 @@
 </html>
 
 <!-- 
-A regra 1 adiciona a cor vermelha a todos os elementos "li" (elementos da lista ordenada).
+A regra 1 adiciona a cor vermelha a todos os elementos "li" (elementos da lista ordenada), mas pela sua baixa especificidade é sobrescrita por outras regras.
 A regra 2 adiciona a todos elementos da classe churras a cor verde.
 A regra 3 adiciona a todos elementos da classe fruta a cor cinza.
 A regra 4 adiciona a cor preta a todos os elementos do tipo li e da classe churras que 
-sucedem um elemento do tipo li.
-A regra 5 adiciona ao item 8 por ser o único a possuir a propriedade dragabble a cor rosa.
+sucedem um elemento do tipo li, sobrescrevendo a regra 2 por ser mais específica.
+A regra 5 adiciona ao item 8 por ser o único a possuir a propriedade dragabble a cor rosa, sobrescrevendo a regra 2 pela sua baixa especificidade.
 A regra 6 adiciona aos elementos de id lip1, lip2 e lip3 a cor azul.
-A regra 7 adiciona ao único elemento de id 3 e de classe fruta a cor laranja.
-A regra 8 adiciona a todos os elementos de tipo lista, com classe churras e id lip5 que
-são filhas diretas da lista ordenada a cor púrpura, porém não há id lip5 presente, tornando
-a regra inútil até o momento.
+A regra 7 adiciona ao único elemento de id 3 e de classe fruta a cor laranja, que sobrescreve os outros por ser ainda mais específico.
+A regra 8 adiciona a todos os elementos de tipo lista, com classe churras e id lip5 que são filhas diretas da lista ordenada a cor púrpura, 
+porém não há id lip5 presente, tornando a regra inútil até o momento.
 
 Evidentemente, as primeiras regras são sobrescritas por outras regras conforme outras são 
 escritas mencionando elementos contidos nas regras anteriores.
