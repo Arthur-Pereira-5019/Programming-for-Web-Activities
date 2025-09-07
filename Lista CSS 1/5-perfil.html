@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%
+        }
+
+        html,
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #container {
+            height: 100%;
+            width: 100%;
+        }
+
+        #direita {
+            height: 100vh;
+            max-width: 70vw;
+            display: inline-block;
+            float: left;
+        }
+
+        #esquerda {
+            height: 100vh;
+            left: 0px;
+            background-color: #4e4e4e;
+            width: 23vw;
+            display: inline-block;
+            float: left;
+        }
+
+        #esquerdaInterna {
+            position: relative;
+            left: 3vw;
+            background-color: #4e4e4e;
+            height: 100%;
+            width: 20vw;
+        }
+
+        #direitaInterna {
+            position: relative;
+            left: 3vw;
+            height: 100%;
+            width: 67vw;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        #esquerda p {
+            color: white;
+        }
+
+        #esquerda span {
+            color: white;
+        }
+
+        #pessoal {
+            font-size: 30px;
+        }
+
+        #listaDadosPessoais {
+            color: white;
+        }
+
+        #dados {
+            position: relative;
+            top: 10%;
+            font-size: 16px;
+        }
+
+        .nomeDado {
+            font-weight: bold;
+        }
+
+
+        img {
+            border-radius: 100%;
+            width: 80%;
+            height: 80%;
+        }
+
+        #foto {
+            position: relative;
+            top: 5%;
+        }
+
+        .tempo {
+            position: fixed;
+            right:5%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="esquerda">
+            <div id="esquerdaInterna">
+                <div id="foto">
+                    <img src="arthur.jpg">
+                </div>
+
+                <div id="dados">
+                    <br>
+                    <span id="pessoal">Pessoal</span>
+                    <hr>
+                    </hr>
+                    <br>
+                    <dl id="listaDadosPessoais">
+                        <dt class="nomeDado">Nome</dt>
+                        <dd class="dadoPessoal">Arthur Pereira</dd>
+                        <br>
+                        <dt class="nomeDado">Endereço</dt>
+                        <dd class="dadoPessoal"></dd>
+                        <br>
+                        <dt class="nomeDado">Número de Telefone</dt>
+                        <dd class="dadoPessoal">5547992708025</dd>
+                        <br>
+                        <dt class="nomeDado">Email</dt>
+                        <dd class="dadoPessoal">exemplos@cvmaker.pt</dd>
+                        <br>
+                        <dt class="nomeDado">Interesses</dt>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div id="direita">
+            <div id="direitaInterna">
+                <h1>Arthur Pereira</h1>
+                <br>
+                <hr><br>
+                <p>
+                    Arthur Pereira é um excelente profissional, formado pelo curso Técnico Integrado ao Ensino Médio no
+                    Instituto Federal de Santa Catarina - Câmpus Gaspar, estudou desenvolvimento de APIs com arquitetura
+                    de
+                    microsserviços com Java - Spring Boot na Udemy. Atualmente, aspira adentrar na Universidade Federal
+                    de
+                    Santa Catarina - Florianópolis, para se graduar em Ciências da Computação.
+                </p>
+                <br>
+                <h2>Experiência profissional</h3>
+                    <br>
+                    <hr><br>
+                    <h4>Auxiliar Técnico</h4><span class="tempo">2022-2025</span>
+                    <em>Gaspar, Santa Catarina</em>
+                    <ul>
+                        <li>Emissão de documentos. </li>
+                        <li>Manutenção da página Web.</li>
+                        <li>Geração de relatórios.</li>
+                    </ul>
+                    <br>
+                    <h4>Bolsista</h4><span class="tempo">2024-2025</span>
+                    <em>Gaspar, Santa Catarina</em>
+                    <ul>
+                        <li>Desenvolvimento de projeto de extensão.</li>
+                        <li>social media, ministração de formações.</li>
+                        <li>Escritor.</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div id="direita">
+</body>
+
+</html>
