@@ -1,68 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Atividade 2</title>
 
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+
+    <style>
+        #container {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+        }
+        
         .quadrado {
             width: 30vw;
-            height: 4vh;
+            height: 5vh;
             background-color: gray;
             margin: 1vh;
         }
 
-        #container {
-            position: absolute;
-            top: 14vh;
-            left: 50%;
-            transform: translateX(-50%);
-        }
 
         .bola {
-            position: absolute;
-            top: 70vh;
-            left: 50%;
-            transform: translateX(-50%);
             background-color: gray;
-            width: 4%;
-            height: 8%;
+            width: 16%;
+            height: 10%;
             border-radius: 100%;
         }
 
         .quadrado2 {
-            width: 12vw;
-            height: 4vh;
+            width: 10vw;
+            height: 5vh;
             background-color: gray;
             margin: 1vh;
             top: 79vh;
-            position: absolute;
-            transform: translateX(-50%);
-            left: 50%;
+        }
 
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #spacer1 {
+            height: 8%;
+        }
+
+        #spacer2 {
+            height: 32%;
         }
 
         p {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
             color: gray;
         }
-
     </style>
 
-    </head>
-    <body>
-        <p>Company Logo</p>
-        <div id="container">
-            <div class="quadrado"></div>
-            <div class="quadrado"></div>
-            <div class="quadrado"></div>
-            <div class="quadrado"></div>
-        </div>
+</head>
 
+<body>
+    <div id="container">
+        <p>Company Logo</p>
+        <div id ="spacer1"></div>
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+        <div id ="spacer2"></div>
         <div class="bola"></div>
         <div class="quadrado2"></div>
-    </body>
+    </div>
+
+</body>
+
 </html>
