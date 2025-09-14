@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html,
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            width: 90vw;
+            height: 100%;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20em;
+        }
+
+        .img:hover {
+            flex: 13;
+            border-radius: 5em;
+        }
+
+        .img {
+            flex: 1;
+            margin: 1%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="img1" class="img">
+            <img src="desert.png">
+        </div>
+        <div id="img2" class="img">
+            <img src="forest.webp">
+        </div>
+        <div id="img3" class="img">
+            <img src="ice_peak.png">
+        </div>
+        <div id="img4" class="img">
+            <img src="nether.jpg">
+        </div>
+        <div id="img5" class="img">
+            <img src="plains.png">
+        </div>
+    </div>
+</body>
+
+</html>
