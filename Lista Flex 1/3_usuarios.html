@@ -25,17 +25,31 @@
             height: 100%;
         }
 
+        .imgcontainer {
+            height: 100%;
+            width: 20%;
+            
+        }
+
         img {
+            position: relative;
             border-radius: 100%;
-            width: 40%;
-            height: 40%;
+            width: 85%;
+            height: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20%;
         }
 
         .t1 {
+            position: relative;
+            left: 5%;
             font-weight: bolder;
         }
 
         .t2 {
+            position: relative;
+            left: 5%;
             color: gray
         }
 
@@ -44,7 +58,12 @@
         }
 
         .box {
-            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 25vh;
+            overflow: hidden;
+            align-content: flex-start;
         }
     </style>
 </head>
@@ -52,25 +71,33 @@
 <body>
     <div id="container">
         <div class="box">
-            <img src="" alt="" class="pic">
+            <div class="imgcontainer">
+                <img src="barbarians.webp" alt="" class="pic">
+            </div>
             <p class="t1">Linda Hart</p>
             <p class="t2">Endereço 1</p>
         </div>
         <hr>
         <div class="box">
-            <img src="" alt="" class="pic">
+            <div class="imgcontainer">
+                <img src="wizard.webp" alt="" class="pic">
+            </div>
             <p class="t1">Roger Medina</p>
             <p class="t2">Endereço 2</p>
         </div>
         <hr>
         <div class="box">
-            <img src="" alt="" class="pic">
+            <div class="imgcontainer">
+                <img src="tesla.webp" alt="" class="pic">
+            </div>
             <p class="t1">Dean Sullivan</p>
             <p class="t2">Endereço 3</p>
         </div>
         <hr>
         <div class="box">
-            <img src="" alt="" class="pic">
+            <div class="imgcontainer">
+                <img src="xbow.webp" alt="" class="pic">
+            </div>
             <p class="t1">Elizabeth Austin</p>
             <p class="t2">Endereço 4</p>
         </div>
