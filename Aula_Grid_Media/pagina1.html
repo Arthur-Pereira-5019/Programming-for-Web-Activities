@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            height: 100vh;
+            grid-template-areas:
+                "header header    header"
+                "lado   conteudo  lado"
+                "lado   conteudo  lado"
+                "lado   conteudo  lado"
+                "footer footer    footer";
+        }
+
+        #caixa1 {
+            grid-area: header;
+            background-color: yellow;
+        }
+
+
+        #caixa3 {
+            grid-area: conteudo;
+            background-color: red;
+        }
+
+        #caixa4 {
+            grid-area: lado;
+            background-color: purple;
+        }
+
+        #caixa5 {
+            grid-area: footer;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caixa1" class="caixa">1</div>
+    <div id="caixa3" class="caixa">3</div>
+    <div id="caixa4" class="caixa">4</div>
+    <div id="caixa5" class="caixa">5</div>
+</body>
+
+</html>
