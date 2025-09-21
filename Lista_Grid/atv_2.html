@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+        body,
+        html {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "header header header header"
+                "nav content content content"
+                "nav content content content"
+                "nav content content content"
+                "nav footer footer footer";
+        }
+
+        #container div {
+            position: relative;
+            font-size: 96px;
+        }
+
+        .text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #header {
+            grid-area: header;
+            background-color: magenta;
+        }
+
+        #nav {
+            grid-area: nav;
+            background-color: yellow;
+        }
+
+        #content {
+            grid-area: content;
+            background-color: salmon;
+        }
+
+        #footer {
+            grid-area: footer;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <p class="text">Header</p>
+        </div>
+        <div id="nav">
+            <p class="text">Nav</p>
+        </div>
+        <div id="content">
+            <p class="text">Content</p>
+        </div>
+        <div id="footer">
+            <p class="text">Footer</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
