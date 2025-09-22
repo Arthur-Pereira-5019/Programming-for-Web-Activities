@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
 
         * {
             margin: 0;
@@ -22,8 +22,8 @@
             display: grid;
             width: 100%;
             height: 100%;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 20% 20% 20% 20% 20%;
             grid-template-areas:
                 "header header header header"
                 "nav content content content"
@@ -57,31 +57,66 @@
         #content {
             grid-area: content;
             background-color: salmon;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text2 {
+            text-align: center;
+        }
+
+        #actualContent {
+            width: 80%;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 25% 25% 25% 25%;
+            grid-template-areas:
+                "pic pic text text"
+                "pic pic text text"
+                "text text text text"
+                "text text text text";
         }
 
         #footer {
             grid-area: footer;
             background-color: green;
         }
+
+        img {
+            grid-area: pic;
+        }
+
+        span {
+            grid-area: text;
+        }
     </style>
-</head>
+    </head>
 
-<body>
-    <div id="container">
-        <div id="header">
-            <p class="text">Header</p>
-        </div>
-        <div id="nav">
-            <p class="text">Nav</p>
-        </div>
-        <div id="content">
-            <p class="text">Content</p>
-        </div>
-        <div id="footer">
-            <p class="text">Footer</p>
-        </div>
+    <body>
+        <div id="container">
+            <div id="header">
+                <p class="text">Header</p>
+            </div>
+            <div id="nav">
+                <p class="text">Nav</p>
+            </div>
+            <div id="content">
+                <p class="text2">Content</p>
+                <div id="actualContent">
+                    <img src="lorem_ipsum.png">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit.
+                        Pariatur modi, expedita est dolorem aspernatur beatae
+                        inventore doloremque amet. Provident fugiat unde a ipsum
+                        totam dolorem ratione, ex porro expedita nam.</span>
+                </div>
+            </div>
+            <div id="footer">
+                <p class="text">Footer</p>
+            </div>
 
-    </div>
-</body>
+        </div>
+    </body>
 
 </html>
