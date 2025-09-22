@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
         * {
             margin: 0;
         }
@@ -32,7 +31,7 @@
                 "nav footer footer footer";
         }
 
-        #container div {
+        #container > div {
             position: relative;
             font-size: 96px;
         }
@@ -56,10 +55,11 @@
 
         #content {
             grid-area: content;
-            background-color: salmon;
+            background: salmon;
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow: hidden;
         }
 
         .text2 {
@@ -68,14 +68,15 @@
 
         #actualContent {
             width: 80%;
+            height: 50vh;
             display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            grid-template-rows: 25% 25% 25% 25%;
             grid-template-areas:
                 "pic pic text text"
                 "pic pic text text"
                 "text text text text"
                 "text text text text";
+            align-items: center;
+            overflow: hidden;
         }
 
         #footer {
@@ -83,40 +84,58 @@
             background-color: green;
         }
 
-        img {
+        #imagemInterna {
             grid-area: pic;
         }
 
-        span {
+        img {
+            width: 40%;
+            height: 40%;
+            object-fit: cover;
+            display: block;
+        }
+
+        #textoInterno {
+            font-size: 32px;
             grid-area: text;
         }
-    </style>
-    </head>
 
-    <body>
-        <div id="container">
-            <div id="header">
-                <p class="text">Header</p>
-            </div>
-            <div id="nav">
-                <p class="text">Nav</p>
-            </div>
-            <div id="content">
-                <p class="text2">Content</p>
-                <div id="actualContent">
+
+        #text3 {
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <p class="text">Header</p>
+        </div>
+        <div id="nav">
+            <p class="text">Nav</p>
+        </div>
+        <div id="content">
+            <p class="text2">Content</p>
+            <div id="actualContent">
+                <div id="imagemInterna">
                     <img src="lorem_ipsum.png">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing
+                </div>
+                <div id="textoInterno">
+Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit.
                         Pariatur modi, expedita est dolorem aspernatur beatae
                         inventore doloremque amet. Provident fugiat unde a ipsum
-                        totam dolorem ratione, ex porro expedita nam.</span>
+                        totam dolorem ratione, ex porro expedita nam.
                 </div>
-            </div>
-            <div id="footer">
-                <p class="text">Footer</p>
-            </div>
 
+            </div>
         </div>
-    </body>
+        <div id="footer">
+            <p class="text">Footer</p>
+        </div>
+
+    </div>
+</body>
 
 </html>
