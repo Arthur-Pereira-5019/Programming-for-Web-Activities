@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        body, html {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            display: grid;
+        }
+
+        #subcontainer {
+            display: grid;
+            width: 90%;
+            height: 90%;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            grid-template-areas: 
+            ""
+            ;
+        }
+
+        .grande {
+            background-color: grey;
+        }
+
+        .pequeno {
+            background-color: lightgray;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="a" class="grande">A</div>
+            <div id="b" class="grande">B</div>
+            <div id="c" class="grande">C</div>
+            <div id="z" class="grande content">
+                <div id="subcontainer">
+                    <div id="e" class="pequeno">E</div>
+                    <div id="f" class="pequeno">F</div>
+                    <div id="g" class="pequeno">G</div>
+                    <div id="m" class="pequeno">H</div>
+                    <div id="i" class="pequeno">J</div>
+                    <div id="j" class="pequeno">I</div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

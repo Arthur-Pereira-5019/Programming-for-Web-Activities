@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .bola {
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            position: absolute;
+        }
+
+
+
+        #bola1 {
+            background-color: salmon;
+            left: 0%;
+            top: 0%;
+        }
+
+        #bola2 {
+            background-color: lightblue;
+            right: 0%;
+            top: 0%;
+        }
+
+        #bola3 {
+            background-color: greenyellow;
+            left: 0%;
+            bottom: 0%;
+        }
+
+        #bola4 {
+            background-color: purple;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #bola5 {
+            background-color: yellow;
+            right: 0%;
+            bottom: 0%;
+        }
+
+        body:hover {
+            animation: rodar 16s none 0s infinite;
+        }
+
+         @keyframes rodar {
+            0% {
+                transform: rotateZ(90deg);
+            }
+
+            33% {
+                 transform: rotateZ(180deg);
+            }
+
+            77% {
+                 transform: rotateZ(270deg)
+            }
+
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="bola1" class="bola"></div>
+        <div id="bola2" class="bola"></div>
+        <div id="bola3" class="bola"></div>
+        <div id="bola4" class="bola"></div>
+        <div id="bola5" class="bola"></div>
+    </div>
+</body>
+</html>

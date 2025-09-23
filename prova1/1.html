@@ -1,0 +1,10 @@
+O navegador do Cliente utiliza o endereço digitado e o converte por meio do protocolo DNS (Domain Name System) que converte o endereço em um IP, um endereço no qual vai ser 
+disparada uma requisição HTTPS ou HTTP, um protocolo que contém um cabeçalho/header que contém metadados sobre o envio (endereço de envio, tipo de método de requisição, o retorno aceito)
+e o body, que contém os dados exatos da requisição, por exemplo a senha e o usuário para o backend do servidor que recebe a requisição gerar um token de acesso para login.
+
+Ao receber a requisição o servidor a processa e retorna também através do protocolo HTTP os dados que devem ser retornados, quase universalmente uma página HTML, um arquivo
+CSS de estilo, as imagens do site e um script javascript. O navegador então processa esse HTML retornado, gerando uma estrutura à partir dele, inferindo algumas regras de 
+estilo caso não sejam explicitadas pelo CSS (por exemplo aplicando margem em elementos como o body do HTML) e gerando um ambiente sandbox para o Javascript ser executado
+sem causar prejuízos à máquina do usuário.
+
+À partir disso, tudo que acontece são sucessivas trocas de mensagens HTTPS/HTTP (O HTTPS sendo mais seguro) entre o cliente e o servidor.
