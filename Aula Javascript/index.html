@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Javascript</title>
+</head>
+<body>
+    <script>
+        var i = 0;
+        let nome='Romulo Beninca'
+        console.log(i)
+        console.log(nome)
+
+        let botao = document.createElement("button")
+        botao.innerHTML = "Clique em mim"
+        document.body.appendChild(botao)
+
+        let paragrafo = document.createElement("span")
+        paragrafo.innerHTML = "Me leia"
+        document.body.appendChild(paragrafo)
+
+        document.body.style.height = "100vh";
+        document.body.style.display = "flex";
+        document.body.style.justifyContent = "center";
+        document.body.style.alignItems = "center";
+
+        botao.addEventListener("click",() => {paragrafo.innerText="Clicado"})
+
+    </script>
+</body>
+</html>
