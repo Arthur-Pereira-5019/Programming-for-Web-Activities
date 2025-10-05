@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pstring"></p>
+    <p id="pnumber"></p>
+    <p id="parray"></p>
+    <p id="pboolean"></p>
+    <p id="pundefined"></p>
+    <p id="pnull"></p>
+    <p id="pobject"></p>
+    <script>
+        let string = "A";
+        let number = 1;
+        let array = ["Oie","Oii","Oi de novo"]
+        let boolean = false;
+        let undefinedV = undefined;
+        let nullV = null;
+        let object = {
+            "chave1":"gaveta1",
+            "chave2":"gaveta2"
+        }
+        
+        const pstring = document.getElementById("pstring");
+        const pnumber = document.getElementById("pnumber");
+        const parray = document.getElementById("parray");
+        const pboolean = document.getElementById("pboolean");
+        const pundefined = document.getElementById("pundefined");
+        const pnull = document.getElementById("pnull");
+        const pobject = document.getElementById("pobject");
+        
+        pstring.textContent = typeof(string);
+        pnumber.textContent = typeof(number);
+        parray.textContent = typeof(array);
+        pboolean.textContent = typeof(boolean);
+        pundefined.textContent = typeof(undefinedV);
+        pnull.textContent = typeof(nullV);
+        pobject.textContent = typeof(object);
+
+        console.log("String + Número:" + (string + number));
+        console.log("String + Número:" + (string + nullV))
+
+        console.log("Número * Número:" + number * number);
+        console.log("String / Null:" + number / nullV)
+
+        console.log("String - Undefined:" + (boolean - undefinedV));
+        console.log("String * Número:" + boolean * number)
+
+        console.log("Undefined + Número:" + (undefinedV + array));
+        console.log("Undefined + Null:" + (undefinedV + nullV))
+
+        console.log("Null / Número:" + nullV / array);
+        console.log("Null / Número:" + nullV / object)
+
+        console.log("Object * Número:" + object * array);
+        console.log("Object - String:" + (object - string))
+
+        console.log("Array + Undefined:" + (array + undefinedV));
+        console.log("Array - String:" + (array - string))
+
+    </script>
+</body>
+</html>

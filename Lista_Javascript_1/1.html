@@ -6,8 +6,27 @@
     <title>O que é JavaScript</title>
 </head>
 <body>
-    <h1>O que é JavaScript</h1>
+    <h1 id="titulo">O que é JavaScript</h1>
 
-    <p>O JavaScript foi criado como forma de dar dinamicidade, funcionalidade e responsividade à web.</p>
+    <p id="paragrafo">O JavaScript foi criado como forma de dar dinamicidade, funcionalidade e responsividade à web. O Javascript pode ser utili-
+        zado tanto no frontend (navegador), quanto no backend(servidor), no navegador ele é utilizado em sandbox, ou seja,
+        com um ambiente limitado para evitar que sites possam ter acesso completo ao computador do usuário, servindo para se
+        comunicar com o servidor, enviando e recebendo informações, dando funcionalidades à página através de event listeners, etc...
+        enquanto no servidor o Javascript serveria como qualquer outra linguagem de programação, ex: Java, C++, etc..., tendo o intuito
+        de processar as requisições feitas pelos clientes, comunicar-se com banco de dados, etc... Este uso em específico tendo surgi-
+        do à posteriori. O Javascript pode acessar alguns elementos globais, sendo eles providos pelo interpretador HTML, ou seja,
+        o navegador, tendo então aparência e funcionalidades ligeiramente diferentes há depender do navegador. Esses objetos são 
+        acessados sem necessidade de instância de variáveis, bastando apenas os chamar, passando parâmetros ou obtendo 
+        seus elementos filho.
+    </p>
+    <p id="hora">Horário: </p>
+    <script>
+        console.log("Script funcionando como o esperado!");
+        alert("Olá forasteiro!");
+
+        const now = new Date()
+        hora = document.getElementById("hora");
+        hora.textContent += now;
+    </script>
 </body>
 </html>
