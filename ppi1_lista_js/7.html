@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Verificador de Palíndromos</h1>
+    <input id="entrada">
+    <p id="resultado">A resposta aparecerá aqui</p>
+    <script>
+        const entrada = document.getElementById("entrada");
+        const resultado = document.getElementById("resultado");
+        entrada.addEventListener("input", function (event) {
+            let palindromo = true;
+            const texto = entrada.value;            
+            for (let i = 0; i < texto.length; i++) {                
+                if (texto[i] != texto[texto.length - 1 - i]) {
+                    palindromo = false;
+                    break;
+                }
+            }
+            if (palindromo == true) {
+                resultado.textContent = "É um palíndromo!"
+            } else {
+                resultado.textContent = "Não é um palíndromo!"
+            }
+        })
+    </script>
+</body>
+
+</html>

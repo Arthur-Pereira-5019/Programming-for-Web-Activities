@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Peneira de Eratóstenes com Intervalo</h1>
+    <input type="number" id="inicio">
+    <input type="number" id="fim">
+    <p id="resposta">Os primos aparecerão aqui</p>
+    <button id="submit">Verificar</button>
+    <script>
+        let v1;
+        let v2;
+        let p = []
+        let s = []
+        const inicio = document.getElementById("inicio");
+        const fim = document.getElementById("fim");
+        const resposta = document.getElementById("resposta");
+
+        const submit = document.getElementById("submit");
+
+        submit.addEventListener("click", function () {
+            v1 = inicio.value;
+            v2 = fim.value;
+                        resposta.textContent = " ";
+
+            if (v1 > v2 || v1 === null || v2 === null) {
+                alert("Digite números válidos!")
+                return;
+            }
+
+
+            for (i = 2; i < v2; i++) {
+                p.push(i);
+            }
+
+            for (i = 0; i < p.length; i++) {
+                s.push(p[i]);
+                for (j = 0; j < p.length; j++) {
+                    p = p.filter(number => number % 2 != 0);
+                }
+            }
+            s = s.filter(n => n > v1 && n < v2)
+            s.forEach(so => {resposta.textContent += so + " "})
+        })
+
+    </script>
+</body>
+
+</html>
