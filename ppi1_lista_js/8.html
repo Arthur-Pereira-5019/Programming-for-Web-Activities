@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            width: 100vw;
+            height: 100vh;
+            margin: 0
+        }
+
+        button {
+            width: 22vw;
+            height: 8vh;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body id="corpo">
+    <p id="p">Cor</p>
+    <button id="trocar">Trocar</button>
+</body>
+<script>
+    const body = document.getElementById("corpo");
+    const p = document.getElementById("p");
+    const button = document.getElementById("trocar");
+    button.addEventListener("click",function() {
+        r = (Math.random() * 256);
+        g = (Math.random() * 256);
+        b = (Math.random() * 256);
+        const color = "rgb("+r+","+g+","+b+")"
+        body.style.backgroundColor = color
+        p.textContent = color
+    })
+</script>
+</html>
