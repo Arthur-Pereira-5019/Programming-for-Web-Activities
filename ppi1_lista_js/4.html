@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p>Nome</p>
+        <input id="campoNome">
+        <p>Peso (kg)</p>
+        <input id="campoPeso">
+        <p>Altura (m)</p>
+        <input id="campoAltura">
+        <img src id="imagem">
+        <button id="calcular">Calcular</button>
+                <p id="imc"></p>
+
+        <script>
+        campoPeso = document.getElementById("campoPeso")
+        campoAltura = document.getElementById("campoAltura")
+        campoImc = document.getElementById("imc")
+        calcular = document.getElementById("calcular")
+        calcular.addEventListener("click", function() {
+            vIMC = campoPeso.value/(campoAltura.value*campoAltura.value)
+            imc.textContent
+            if (vIMC>40) {
+                imagem.src = "obesidade3.png"
+            } else if (vIMC>35) {
+                imagem.src = "obesidade2.png"
+            } else if (vIMC>30) {
+                imagem.src = "obesidade1.png"
+                } else if (vIMC>25) {
+                imagem.src = "obesidade1.png"
+            } else if (vIMC>18.5) {
+                imagem.src = "normal.png"
+            } else {
+                imagem.src = "abaixopeso.png"
+            }
+            
+        })
+
+</script>
+    </body>
+</html>
