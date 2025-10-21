@@ -22,9 +22,42 @@
 <body>
     <h1>Sorteio de Números</h1>
     <h2 id="resultado">O número sorteado foi: </h2>
+    <p>Valor mínimo</p>
     <input id = "inicio">
+    <p>Valor máximo</p>
+
     <input id = "fim">
+        <p id="lista_sorteados">Valores sorteados: </p>
+
     <button id="sortear">Sortear</button>
     <p id="vezes"></p>
+    <script>
+        let inicio = document.getElementById("inicio");
+        let fim = document.getElementById("fim");
+        let resultado = document.getElementById("resultado");
+        let sortear = document.getElementById("sortear");
+        let lista_sorteados = document.getElementById("lista_sorteados");
+
+
+        let sorteados = [];
+
+        sortear.addEventListener("click", function() {
+            let res = Number(Math.floor(Math.random() * (fim.value - inicio.value + 1))) + Number(inicio.value)
+            resultado.textContent = "O número sorteado foi: " + res;
+            sorteado = false;
+            sorteados.forEach((element) => {
+                if(element.number == res) {
+                    sorteado = true;
+                    element.times++;
+                    alert("O valor " + res + " já foi sorteado" + element.times + " vezes!")
+                }
+            });
+            if(!sorteado) {
+                sorteados.push({"number":res,"times":0})
+                lista_sorteados.textContent += res + ", ";
+            }
+        })
+        
+    </script>
 </body>
 </html>
