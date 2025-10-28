@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0
+            }
+
+            body {
+                display: flex;
+                width: 100vw;
+            }
+            body > div {
+                flex: 1;
+                aspect-ratio: 1/1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bloco" id="bloco1">
+            <p class="texto" id="texto1"></p>
+        </div>
+        <div class="bloco" id="bloco2">
+            <p class="texto" id="texto2"></p>
+        </div>
+        <div class="bloco" id="bloco3">
+            <p class="texto" id="texto3"></p>
+        </div>
+        <div class="bloco" id="bloco4">
+            <p class="texto" id="texto4"></p>
+        </div>
+        <div class="bloco" id="bloco5">
+            <p class="texto" id="texto5"></p>
+        </div>
+        <script>
+        document.addEventListener("keydown", function(event) {
+            if(event.key === " ") {
+                let blocos = document.querySelectorAll(".bloco")
+                
+                blocos.forEach(e => {
+        r = (Math.random() * 256);
+        g = (Math.random() * 256);
+        b = (Math.random() * 256);
+        const color = "rgb("+r+","+g+","+b+")"
+        e.querySelector(".texto").textContent = color;
+                    e.style.backgroundColor = color;
+                })
+            }
+        })
+    </script>
+    </body>
+</html>
