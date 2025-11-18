@@ -6,7 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <?php if(isset($_GET['error'])) {
+    <?php 
+    session_start();
+    if(isset($_SESSION['username'])) {
+        echo "<p>Usuário logado: " . $_SESSION['username'] . "</p>";  
+    } else {
+        header("Location: login.php?error=nao_autenticado");
+        exit();
+    }
+
+    if(isset($_GET['nome'])) {
+        $_SESSION['nome'] = $_GET['nome']
+        echo "<h2>Bem-vindo: " . $_SESSION['username'] . "</h2>";  
+    }
+    
+    if(isset($_GET['error'])) {
         if($_GET['error'] == 'faltando_dados') {
     echo '<p>Faltando dados</p>';
 
