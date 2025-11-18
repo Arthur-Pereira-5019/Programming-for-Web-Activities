@@ -6,8 +6,18 @@
     <title>Document</title>
 </head>
 <body>
+    <?php if(isset($_GET['error'])) {
+        if($_GET['error'] == 'faltando_dados') {
+    echo '<p>Faltando dados</p>';
+
+        } else if($_GET['error'] == 'dados_invalidos') {
+    echo '<p>Dados inválidos</p>';
+
+        }
+    }
+ ?>
     <h2>Formulário de Cadastro</h2>
-    <form action="imc.php" method = "get">
+    <form action="imc.php" method = "post">
         <label for="iname">Nome</label>
         <input type="text" id="iname" name = "nome">
 

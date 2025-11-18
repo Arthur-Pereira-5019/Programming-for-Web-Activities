@@ -1,8 +1,17 @@
-<?php if(isset($_GET['nome'])) {?>
+<?php if(!(isset($_POST['peso']) && isset($_POST['altura']))) {
+    header("Location: formulario.php?error=faltando_dados");
+    exit();
+}
+$peso = $_POST['peso'];
+$altura = $_POST['altura'];
+
+    ?>
 <p>IMC:<?php
-    $nome = $_GET['nome'];
-    $email = $_GET['email'];
-    $peso = $_GET['peso'];
-    $altura = $_GET['altura'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    if(!is_numeric($peso) || !is_numeric($altura) || $altura <= 0 ) {
+        header("Location: formulario.php?error=dados_invalidos");
+        exit();
+    }
     echo $peso/($altura*$altura);
-    ?><p><?php } ?>
+    ?><p><?php ?>
