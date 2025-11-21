@@ -1,26 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <style>
+        body,
+        html {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            background-color: darkcyan;
+        }
+
+        #calc_container {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: grid;
+            width: 65vh;
+            height: 45vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "inputT inputT inputT inputT"
+                "buttonplus buttonminus buttontimes buttondivide"
+                "buttonnine buttoneight buttonseven buttonequals"
+                "buttonsix buttonfive buttonfour buttonequals"
+                "buttonthree buttontwo buttonone buttonequals"
+                "buttonzero buttondot buttonclear buttonequals"
+        }
+
+        #inputT {
+            grid-area: inputT;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .greybutton {
+            background-color: grey;
+        }
+
+        #buttonplus {
+            grid-area: buttonplus;
+        }
+
+        #buttonminus {
+            grid-area: buttonminus;
+        }
+
+        #buttontimes {
+            grid-area: buttontimes;
+        }
+
+        #buttondivide {
+            grid-area: buttondivide;
+        }
+
+        #buttonone {
+            grid-area: buttonone;
+        }
+
+        #buttontwo {
+            grid-area: buttontwo;
+        }
+
+        #buttonfour {
+            grid-area: buttonfour;
+        }
+
+        #buttonsix {
+            grid-area: buttonsix;
+        }
+
+        #buttonthree {
+            grid-area: buttonthree;
+        }
+
+        #buttonfive {
+            grid-area: buttonfive;
+        }
+
+        #buttonseven {
+            grid-area: buttonseven;
+        }
+
+        #buttoneight {
+            grid-area: buttoneight;
+        }
+
+        #buttonnine {
+            grid-area: buttonnine;
+        }
+
+        #buttonzero {
+            grid-area: buttonzero;
+        }
+
+        #buttondot {
+            grid-area: buttondot;
+        }
+
+        #buttonclear {
+            grid-area: buttonclear;
+        }
+
+        #buttonequals {
+            grid-area: buttonequals;
+        }
+
+        #buttondot {
+            grid-area: buttondot;
+        }
+
+        .buttonorange {
+            background-color: rgb(228, 145, 0);
+        }
+
+        * {
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <button class="buttonnormal" id="button">+</button>
-    <button class="buttonnormal" id="button">-</button>
-    <button class="buttonnormal" id="button">x</button>
-    <button class="buttonnormal" id="button">/</button>
-    <button class="buttonnormal" id="button">1</button>
-    <button class="buttonnormal" id="button">2</button>
-    <button class="buttonnormal" id="button">3</button>
-    <button class="buttonnormal" id="button">4</button>
-    <button class="buttonnormal" id="button">5</button>
-    <button class="buttonnormal" id="button">6</button>
-    <button class="buttonnormal" id="button">7</button>
-    <button class="buttonnormal" id="button">8</button>
-    <button class="buttonnormal" id="button">9</button>
-    <button class="buttonnormal" id="button">.</button>
-    <button class="buttonnormal" id="button">AC</button>
-    <button class="buttonnormal" id="button">= </button>
+    <div id="calc_container">
+        <p id="inputT"></p>
+        <button class="greybutton butnum" id="buttonplus">+</button>
+        <button class="greybutton butnum" id="buttonminus">-</button>
+        <button class="greybutton butnum" id="buttontimes">*</button>
+        <button class="greybutton butnum" id="buttondivide">/</button>
+        <button class="buttonnormal butnum" id="buttonone">1</button>
+        <button class="buttonnormal butnum" id="buttontwo">2</button>
+        <button class="buttonnormal butnum" id="buttonthree">3</button>
+        <button class="buttonnormal butnum" id="buttonfour">4</button>
+        <button class="buttonnormal butnum" id="buttonfive">5</button>
+        <button class="buttonnormal butnum" id="buttonsix">6</button>
+        <button class="buttonnormal butnum" id="buttonseven">7</button>
+        <button class="buttonnormal butnum" id="buttoneight">8</button>
+        <button class="buttonnormal butnum" id="buttonnine">9</button>
+        <button class="buttonnormal butnum" id="buttonzero">0</button>
+        <button class="buttonnormal butnum" id="buttondot">.</button>
+        <button class="buttonnormal" id="buttonclear">AC</button>
+        <button class="buttonorange" id="buttonequals">=</button>
+    </div>
+    <script>
+        let input = document.getElementById("inputT")
+        document.querySelectorAll(".butnum").forEach((e) => {
+            e.addEventListener("click", function () {
+                input.textContent += e.textContent
+            })
+        });
+        document.querySelector("#buttonclear").addEventListener("click", function() {
+            input.textContent = ""
+        })
+        document.querySelector("#buttonequals").addEventListener("click", function() {
+            input.textContent = eval(input.textContent)
+        })
+    </script>
+
 </body>
+
 </html>
