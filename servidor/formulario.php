@@ -16,7 +16,7 @@
     }
 
     if(isset($_GET['nome'])) {
-        $_SESSION['nome'] = $_GET['nome']
+        $_SESSION['nome'] = $_GET['nome'];
         echo "<h2>Bem-vindo: " . $_SESSION['username'] . "</h2>";  
     }
     
